@@ -1,0 +1,81 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" 
+         editor-extension-mode="False">
+    <Style src="SettingsPanel.uss" />
+    <Style src="Common.uss" />
+    <ui:VisualElement name="settings-panel" class="panel">
+        <ui:VisualElement name="header" class="header">
+            <ui:VisualElement class="header-content">
+                <ui:VisualElement name="logo-container" class="logo-container" style="background-image: resource('logo_zoom');" />
+                <ui:Label text="Settings" class="header-text"/>
+            </ui:VisualElement>
+            <ui:Button name="closeButton" text="✕" class="close-button"/>
+        </ui:VisualElement>
+        
+        <ui:ScrollView name="settings-scroll" class="scroll-view" scroll-deceleration-rate="0.135" elasticity="0.1" mouse-wheel-scroll-size="1000">
+            <ui:VisualElement name="settings-content" class="content">
+                
+                <!-- Capture Card Section -->
+                <ui:VisualElement class="setting-group">
+                    <ui:Label text="Capture Card:" class="setting-label"/>
+                    <ui:DropdownField name="captureCardDropdown" class="setting-dropdown"/>
+                </ui:VisualElement>
+                
+                <!-- Audio Device Section -->
+                <ui:VisualElement class="setting-group">
+                    <ui:Label text="Audio Device:" class="setting-label"/>
+                    <ui:DropdownField name="audioDeviceDropdown" class="setting-dropdown"/>
+                </ui:VisualElement>
+                
+                <!-- Resolution Section -->
+                <ui:VisualElement class="setting-group">
+                    <ui:Label text="Resolution:" class="setting-label"/>
+                    <ui:DropdownField name="resolutionDropdown" class="setting-dropdown"/>
+                </ui:VisualElement>
+                
+                <!-- FPS Section -->
+                <ui:VisualElement class="setting-group">
+                    <ui:Label text="FPS:" class="setting-label"/>
+                    <ui:DropdownField name="fpsDropdown" class="setting-dropdown"/>
+                </ui:VisualElement>
+                
+                <!-- Aspect Ratio Section -->
+                <ui:VisualElement class="setting-group">
+                    <ui:Label text="Aspect Ratio:" class="setting-label"/>
+                    <ui:DropdownField name="aspectRatioDropdown" class="setting-dropdown"/>
+                </ui:VisualElement>
+                
+                <!-- Audio Sync Settings -->
+                <ui:VisualElement class="setting-group">
+                    <ui:Toggle name="audioSyncToggle" text="Enable Audio Sync" class="setting-toggle"/>
+                </ui:VisualElement>
+                
+                <ui:VisualElement class="setting-group">
+                    <ui:Label text="Auto Sync Frequency:" class="setting-label"/>
+                    <ui:DropdownField name="audioSyncFrequencyDropdown" class="setting-dropdown"/>
+                </ui:VisualElement>
+                
+                <!-- FPS Counter Toggle -->
+                <ui:VisualElement class="setting-group">
+                    <ui:Toggle name="fpsCounterToggle" text="Show FPS Counter" class="setting-toggle"/>
+                </ui:VisualElement>
+                
+                <!-- Show Keymaps Button -->
+                <ui:VisualElement class="button-container">
+                    <ui:Button name="showKeymapsButton" class="secondary-button">
+                        <ui:VisualElement class="button-icon" style="background-image: resource('keyboard_');" />
+                        <ui:Label text="View Keyboard Shortcuts" class="button-text" />
+                    </ui:Button>
+                </ui:VisualElement>
+                
+                <!-- Save Button -->
+                <ui:VisualElement class="button-container">
+                    <ui:Button name="saveButton" class="save-button">
+                        <ui:VisualElement class="button-icon" style="background-image: resource('save_final');" />
+                        <ui:Label text="Save Preferences" class="button-text" />
+                    </ui:Button>
+                </ui:VisualElement>
+                
+            </ui:VisualElement>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

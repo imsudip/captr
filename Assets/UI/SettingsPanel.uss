@@ -1,0 +1,347 @@
+/* Modern Dark Theme for Settings Panel */
+
+/* Root Variables */
+:root {
+    --bg-primary: rgb(9, 9, 11);
+    --bg-secondary: rgb(24, 24, 27);
+    --bg-hover: rgb(39, 39, 42);
+    --border-default: rgb(63, 63, 70);
+    --border-hover: rgb(82, 82, 91);
+    --text-primary: rgb(250, 250, 250);
+    --text-secondary: rgb(161, 161, 170);
+    --accent: rgb(249, 115, 22);
+    --accent-hover: rgb(234, 88, 12);
+}
+
+/* Panel Container */
+.panel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 420px;
+    background-color: var(--bg-primary);
+    padding: 0;
+    border-right-width: 1px;
+    border-right-color: var(--border-default);
+    translate: -420px 0 0;
+    transition-property: translate;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.panel-visible {
+    translate: 0 0 0;
+}
+
+.panel-hidden {
+    translate: -420px 0 0;
+}
+
+/* Header */
+.header {
+    background-color: var(--bg-primary);
+    padding: 20px 20px 16px 24px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--border-default);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo-container {
+    width: 36px;
+    height: 36px;
+    background-color: transparent;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.header-text {
+    font-size: 22px;
+    color: var(--text-primary);
+    -unity-font-style: bold;
+    -unity-text-align: middle-left;
+}
+
+.close-button {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 20px;
+    -unity-text-align: middle-center;
+    padding: 0;
+    margin: 0;
+}
+
+.close-button:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.close-button:active {
+    background-color: var(--border-default);
+}
+
+/* Scroll View */
+.scroll-view {
+    flex-grow: 1;
+    background-color: var(--bg-primary);
+}
+
+.content {
+    padding: 20px 20px 200px 20px;
+}
+
+.setting-group {
+    margin-bottom: 20px;
+}
+
+.setting-label {
+    font-size: 13px;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    -unity-font-style: normal;
+}
+
+/* Dropdown Field - Clean minimal approach */
+.setting-dropdown {
+    height: 44px;
+    min-height: 44px;
+}
+
+.setting-dropdown .unity-base-popup-field__input {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-default);
+    border-width: 1px;
+    border-radius: 6px;
+    padding: 0 14px;
+    height: 44px;
+    min-height: 44px;
+}
+
+.setting-dropdown:hover .unity-base-popup-field__input {
+    border-color: var(--border-hover);
+}
+
+.setting-dropdown:focus .unity-base-popup-field__input {
+    border-color: var(--accent);
+    border-width: 2px;
+}
+
+.setting-dropdown .unity-base-popup-field__text {
+    color: var(--text-primary);
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+    -unity-text-align: middle-left;
+}
+
+.setting-dropdown .unity-base-popup-field__arrow {
+    width: 12px;
+    height: 12px;
+    -unity-background-image-tint-color: var(--text-primary);
+    margin-right: 2px;
+}
+
+/* Toggle/Checkbox - Fixed to show checkmark properly */
+.setting-toggle {
+    flex-direction: row;
+    align-items: center;
+    height: 44px;
+    margin-bottom: 0;
+}
+
+.setting-toggle > .unity-toggle__input {
+    width: 20px;
+    height: 40px;
+    background-color: var(--bg-secondary);
+    border-color: var(--border-default);
+    border-width: 1px;
+    border-radius: 4px;
+    margin-right: 12px;
+    padding-left: 8px;
+}
+
+.setting-toggle:hover > .unity-toggle__input {
+    border-color: var(--border-hover);
+}
+
+.setting-toggle:checked > .unity-toggle__input {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.setting-toggle > .unity-toggle__checkmark {
+    -unity-background-image-tint-color: white;
+}
+
+.setting-toggle > .unity-label {
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+/* Button Container */
+.button-container {
+    margin-top: 20px;
+    padding-bottom: 0;
+}
+
+.secondary-button {
+    height: 44px;
+    min-height: 44px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    border-width: 1px;
+    border-color: var(--border-default);
+    color: var(--text-primary);
+    font-size: 15px;
+    -unity-font-style: normal;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.secondary-button .button-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.secondary-button .button-text {
+    color: var(--text-primary);
+    font-size: 15px;
+    -unity-font-style: normal;
+}
+
+.secondary-button:hover {
+    background-color: var(--bg-hover);
+    border-color: var(--border-hover);
+}
+
+.secondary-button:active {
+    background-color: var(--border-default);
+}
+
+.save-button {
+    height: 44px;
+    min-height: 44px;
+    background-color: var(--accent);
+    border-radius: 8px;
+    border-width: 0;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    -unity-font-style: bold;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.button-text {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    -unity-font-style: bold;
+}
+
+.save-button:hover {
+    background-color: var(--accent-hover);
+}
+
+.save-button:active {
+    background-color: rgb(194, 65, 12);
+}
+
+/* Scrollbar */
+.unity-scroller--vertical {
+    width: 8px;
+    background-color: transparent;
+}
+
+.unity-scroller__low-button,
+.unity-scroller__high-button {
+    display: none;
+}
+
+.unity-base-slider--vertical {
+    width: 8px;
+    margin: 0;
+}
+
+.unity-base-slider__tracker {
+    background-color: transparent;
+    border-width: 0;
+}
+
+.unity-base-slider__dragger {
+    background-color: var(--border-default);
+    border-radius: 4px;
+    border-width: 0;
+    width: 8px;
+}
+
+.unity-base-slider__dragger:hover {
+    background-color: var(--border-hover);
+}
+
+/* Dropdown Popup Menu Styling - Using correct Unity USS class names */
+.unity-generic-dropdown-menu__container-outer {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-default);
+    border-width: 1px;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.unity-generic-dropdown-menu__container-inner {
+    background-color: var(--bg-secondary);
+}
+
+.unity-generic-dropdown-menu__item {
+    background-color: transparent;
+    padding: 8px 12px;
+    border-radius: 4px;
+    min-height: 32px;
+}
+
+.unity-generic-dropdown-menu__item:hover {
+    background-color: var(--bg-hover);
+}
+
+.unity-generic-dropdown-menu__item:checked {
+    background-color: var(--bg-hover);
+}
+
+.unity-generic-dropdown-menu__label {
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.unity-generic-dropdown-menu__checkmark {
+    -unity-background-image-tint-color: var(--accent);
+}
+
+.unity-generic-dropdown-menu__separator {
+    background-color: var(--border-default);
+    height: 1px;
+}

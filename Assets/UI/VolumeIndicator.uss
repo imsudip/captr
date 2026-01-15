@@ -1,0 +1,21 @@
+/* Volume Indicator Styles */
+
+.volume-panel {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+    background-color: rgba(9, 9, 11, 0.95);
+    border-radius: 12px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-width: 1px;
+    border-color: rgb(39, 39, 42);
+}
+
+.volume-text {
+    font-size: 16px;
+    color: rgb(249, 115, 22);
+    -unity-font-style: bold;
+}

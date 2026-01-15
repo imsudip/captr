@@ -1,0 +1,118 @@
+/* Keymaps Panel - Right Side */
+
+/* Root Variables */
+:root {
+    --bg-primary: rgb(9, 9, 11);
+    --bg-secondary: rgb(24, 24, 27);
+    --bg-hover: rgb(39, 39, 42);
+    --border-default: rgb(63, 63, 70);
+    --border-hover: rgb(82, 82, 91);
+    --text-primary: rgb(250, 250, 250);
+    --text-secondary: rgb(161, 161, 170);
+    --accent: rgb(249, 115, 22);
+    --accent-hover: rgb(234, 88, 12);
+}
+
+/* Panel Container */
+.keymaps-panel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 350px;
+    background-color: var(--bg-primary);
+    padding: 0;
+    border-left-width: 1px;
+    border-left-color: var(--border-default);
+    translate: 350px 0 0;
+    transition-property: translate;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+
+.keymaps-panel-visible {
+    translate: 0 0 0;
+}
+
+.keymaps-panel-hidden {
+    translate: 350px 0 0;
+}
+
+/* Header */
+.keymaps-header {
+    background-color: var(--bg-primary);
+    padding: 20px 20px 16px 24px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--border-default);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.keymaps-header-text {
+    font-size: 18px;
+    color: var(--text-primary);
+    -unity-font-style: bold;
+    -unity-text-align: middle-left;
+}
+
+.keymaps-close-button {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border-width: 0;
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 20px;
+    -unity-text-align: middle-center;
+    padding: 0;
+    margin: 0;
+}
+
+.keymaps-close-button:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.keymaps-close-button:active {
+    background-color: var(--border-default);
+}
+
+/* Scroll View */
+.keymaps-scroll-view {
+    flex-grow: 1;
+    background-color: var(--bg-primary);
+}
+
+.keymaps-content {
+    padding: 24px;
+}
+
+/* Keymap Items */
+.keymap-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    background-color: var(--bg-secondary);
+    border-radius: 6px;
+}
+
+.keymap-key {
+    font-size: 14px;
+    color: var(--accent);
+    -unity-font-style: bold;
+    background-color: var(--bg-hover);
+    padding: 6px 12px;
+    border-radius: 4px;
+    min-width: 45px;
+    -unity-text-align: middle-center;
+}
+
+.keymap-description {
+    font-size: 14px;
+    color: var(--text-secondary);
+    flex-grow: 1;
+    margin-left: 14px;
+}

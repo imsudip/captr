@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" 
+         editor-extension-mode="False">
+    <Style src="VolumeIndicator.uss" />
+    <Style src="Common.uss" />
+    <ui:VisualElement name="volume-indicator" class="volume-panel">
+        <ui:Label name="volumeText" text="Volume: 50%" class="volume-text"/>
+    </ui:VisualElement>
+</ui:UXML>

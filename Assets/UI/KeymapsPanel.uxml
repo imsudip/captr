@@ -1,0 +1,46 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" 
+         editor-extension-mode="False">
+    <Style src="KeymapsPanel.uss" />
+    <ui:VisualElement name="keymaps-panel" class="keymaps-panel">
+        <ui:VisualElement name="keymaps-header" class="keymaps-header">
+            <ui:Label text="Keyboard Shortcuts" class="keymaps-header-text"/>
+            <ui:Button name="keymapsCloseButton" text="✕" class="keymaps-close-button"/>
+        </ui:VisualElement>
+        
+        <ui:ScrollView name="keymaps-scroll" class="keymaps-scroll-view">
+            <ui:VisualElement name="keymaps-content" class="keymaps-content">
+                
+                <ui:VisualElement class="keymap-item">
+                    <ui:Label text="ESC" class="keymap-key"/>
+                    <ui:Label text="Toggle Settings" class="keymap-description"/>
+                </ui:VisualElement>
+                
+                <ui:VisualElement class="keymap-item">
+                    <ui:Label text="F5" class="keymap-key"/>
+                    <ui:Label text="Toggle Fullscreen" class="keymap-description"/>
+                </ui:VisualElement>
+                
+                <ui:VisualElement class="keymap-item">
+                    <ui:Label text="↑" class="keymap-key"/>
+                    <ui:Label text="Volume Up (+10%)" class="keymap-description"/>
+                </ui:VisualElement>
+                
+                <ui:VisualElement class="keymap-item">
+                    <ui:Label text="↓" class="keymap-key"/>
+                    <ui:Label text="Volume Down (-10%)" class="keymap-description"/>
+                </ui:VisualElement>
+                
+                <ui:VisualElement class="keymap-item">
+                    <ui:Label text="M" class="keymap-key"/>
+                    <ui:Label text="Mute/Unmute Audio" class="keymap-description"/>
+                </ui:VisualElement>
+                
+                <ui:VisualElement class="keymap-item">
+                    <ui:Label text="R" class="keymap-key"/>
+                    <ui:Label text="Manual Audio Sync" class="keymap-description"/>
+                </ui:VisualElement>
+                
+            </ui:VisualElement>
+        </ui:ScrollView>
+    </ui:VisualElement>
+</ui:UXML>

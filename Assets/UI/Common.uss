@@ -1,0 +1,13 @@
+/* Common Utility Styles */
+
+.unity-text-element {
+    color: rgb(250, 250, 250);
+}
+
+.unity-button {
+    cursor: link;
+}
+
+.unity-label {
+    color: rgb(250, 250, 250);
+}
