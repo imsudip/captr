@@ -3,6 +3,8 @@
 A professional Unity-based capture card software with modern dark UI, designed for seamless video and audio capture from external devices.
 
 > 💡 **Related Project**: This is a modern UI rewrite. For the original project, see [VideoGameCapture](https://github.com/ImmerNochNoah/VideoGameCapture) by ImmerNochNoah.
+>
+> ℹ️ **Disclaimer**: I'm new to Unity and this project was developed with AI assistance.
 
 ![Unity Version](https://img.shields.io/badge/Unity-2022.3.62f3-black)
 
